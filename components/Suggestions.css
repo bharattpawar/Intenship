@@ -1,0 +1,186 @@
+/* Suggestions.css - Fixed Positioning */
+.suggestions-container {
+    position: absolute;
+    width: 100%;
+    max-height: 300px;
+    background: white;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Increased z-index to ensure it stays on top */
+    margin-top: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: none;
+    overflow: hidden;
+    animation: fadeIn 0.2s ease-out;
+  }
+  
+  .suggestions-header {
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+    color: #6c757d;
+    background: #f8f9fa;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .suggestions-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 250px;
+    overflow-y: auto;
+  }
+  
+  .suggestion-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+  }
+  
+  .suggestion-item:hover {
+    background: #f1f3f5;
+    border-left-color: #4361ee;
+  }
+  
+  .suggestion-icon {
+    margin-right: 0.75rem;
+    color: #4361ee;
+    font-weight: bold;
+    font-size: 1.1rem;
+    opacity: 0.7;
+  }
+  
+  .suggestion-text {
+    flex: 1;
+    color: #333;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Scrollbar styling */
+  .suggestions-list::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .suggestions-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .suggestions-list::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+  }
+  
+  .suggestions-list::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+  }
+  
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    .suggestions-container {
+      background: #2d2d2d;
+      border-color: #444;
+    }
+    
+    .suggestions-header {
+      background: #252525;
+      border-color: #444;
+      color: #aaa;
+    }
+    
+    .suggestion-item:hover {
+      background: #3a3a3a;
+    }
+    
+    .suggestion-text {
+      color: #eee;
+    }
+    
+    .suggestion-icon {
+      color: #5a7cff;
+    }
+    
+    .suggestions-list::-webkit-scrollbar-track {
+      background: #3a3a3a;
+    }
+    
+    .suggestions-list::-webkit-scrollbar-thumb {
+      background: #555;
+    }
+  }
+  
+  /* Ultra-Responsive Adjustments for Small Phones */
+  @media (max-width: 480px) {
+    .suggestions-container {
+      max-height: 250px; /* Slightly smaller height for smaller screens */
+      border-radius: 0 0 8px 8px; /* Match reduced border-radius */
+    }
+  
+    .suggestions-header {
+      padding: 0.6rem 0.75rem;
+      font-size: 0.8rem;
+    }
+  
+    .suggestions-list {
+      max-height: 200px;
+    }
+  
+    .suggestion-item {
+      padding: 0.6rem 0.75rem;
+    }
+  
+    .suggestion-icon {
+      margin-right: 0.5rem;
+      font-size: 1rem;
+    }
+  
+    .suggestion-text {
+      font-size: 0.9rem;
+    }
+  
+    .suggestions-list::-webkit-scrollbar {
+      width: 4px; /* Thinner scrollbar for small screens */
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .suggestions-container {
+      max-height: 200px; /* Further reduced height */
+    }
+  
+    .suggestions-header {
+      padding: 0.5rem 0.6rem;
+      font-size: 0.75rem;
+    }
+  
+    .suggestions-list {
+      max-height: 150px;
+    }
+  
+    .suggestion-item {
+      padding: 0.5rem 0.6rem;
+    }
+  
+    .suggestion-icon {
+      margin-right: 0.4rem;
+      font-size: 0.9rem;
+    }
+  
+    .suggestion-text {
+      font-size: 0.85rem;
+    }
+  
+    .suggestions-list::-webkit-scrollbar {
+      width: 3px; /* Even thinner scrollbar */
+    }
+  }

@@ -1,0 +1,26 @@
+{
+  "name": "tailwinf",
+  "version": "1.0.0",
+  "description": "",
+  
+    "source": "index.html",
+    "scripts": {
+      "start": "parcel index.html"
+    }
+  ,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "parcel": "^2.14.2"
+  },
+  "dependencies": {
+    "@babel/preset-react": "^7.26.3",
+    "chart.js": "^4.4.8",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-redux": "^9.2.0",
+    "redux": "^5.0.1"
+  }
+}
